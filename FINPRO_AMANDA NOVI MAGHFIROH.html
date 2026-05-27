@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGIS Kependudukan Kabupaten Sidoarjo</title>
+    <link rel="stylesheet" href="FINPRO_AMANDA NOVI M.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="FINPRO_AMANDA NOVI M.js"></script>
+  </head>
+  <body>
+    <!-- WELCOME POPUP -->
+    <div id="welcomePopup" class="popup-overlay">
+      <div class="popup-content">
+        <h2>Selamat Datang di WebGIS Kabupaten Sidoarjo</h2>
+        <p>Selamat menjelajahi informasi kependudukan Kabupaten Sidoarjo!</p>
+        <button id="enterBtn">Masuk</button>
+      </div>
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="fotoku.jpeg" class="profile" />
+        <h2>WebGIS Sidoarjo</h2>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#home" class="active">Beranda</a></li>
+        <li><a href="#data">Data</a></li>
+        <li><a href="#galeri">Lokasi</a></li>
+        <li><a href="#map">Peta</a></li>
+        <li><a href="#contact">Kontak</a></li>
+        <li><a href="CV - Amanda Novi Maghfiroh/JavaScript Web CV Interaktif.html">CV Saya</a></li>
+      </ul>
+      <button id="darkModeToggle">Mode Malam 🌙</button>
+    </nav>
+
+    <!-- HERO SLIDER -->
+    <section id="home" class="hero koak">
+      <h1 class="hero-title">WEBGIS KEPENDUDUKAN KABUPATEN SIDOARJO</h1>
+      <div class="hero-container">
+        <div class="hero-slide active">
+          <img src="sidoarjoku.jpeg" />
+          <div class="hero-overlay">
+            <h2>Kabupaten Sidoarjo</h2>
+            <p>
+              Kabupaten Sidoarjo adalah wilayah yang dikenal sebagai penyangga utama Kota Surabaya dengan perkembangan yang sangat pesat. Daerah ini tidak hanya dipenuhi kawasan industri, tetapi juga memiliki kehidupan masyarakat yang
+              dinamis, menjadikannya salah satu wilayah strategis di Jawa Timur.
+            </p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="sidoarjo2.jpg" />
+          <div class="hero-overlay">
+            <h2>Pusat Ekonomi</h2>
+            <p>
+              Sidoarjo merupakan salah satu motor penggerak ekonomi di Jawa Timur. Aktivitas industri, perdagangan, hingga UMKM berkembang pesat di berbagai sektor, mulai dari olahan makanan hingga kerajinan khas. Kehadiran berbagai kawasan
+              industri membuat Sidoarjo menjadi pusat aktivitas ekonomi yang terus tumbuh.
+            </p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="sidoarjo3.jpg" />
+          <div class="hero-overlay">
+            <h2>Wisata dan Budaya</h2>
+            <p>
+              Di balik kesibukan industrinya, Sidoarjo menyimpan beragam potensi wisata dan budaya yang menarik. Mulai dari fenomena unik Lumpur Lapindo, wisata religi, hingga kekayaan kuliner seperti bandeng dan kerupuk udang yang sudah
+              terkenal. Tradisi lokal yang masih terjaga menambah daya tarik tersendiri bagi siapa saja yang berkunjung.
+            </p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="polresta.webp" />
+          <div class="hero-overlay">
+            <h2>Polresta Kabupaten Sidoarjo</h2>
+            <p>Polresta Sidoarjo (Kepolisian Resor Kota Sidoarjo) adalah satuan kewilayahan Polri di tingkat kabupaten/kota yang bertugas di bawah Polda Jatim.</p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="kementrianagama.jpg" />
+          <div class="hero-overlay">
+            <h2>Kementrian Agama Kabupaten Sidoarjo</h2>
+            <p>Kantor Kementerian Agama Kabupaten Sidoarjo (Kemenag Sidoarjo) adalah instansi vertikal di bawah Kanwil Kemenag Provinsi Jawa Timur yang bertugas menyelenggarakan urusan pemerintahan di bidang agama.</p>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="pengadilannegeri.jpeg" />
+          <div class="hero-overlay">
+            <h2>Pengadilan Negeri Kabupaten Sidoarjo</h2>
+            <p>
+              Pengadilan Negeri Sidoarjo (PN Sidoarjo) adalah lembaga peradilan tingkat pertama Kelas 1A Khusus yang berlokasi di Jl. Jaksa Agung R. Soeprapto No. 10, Sidoarjo, Jawa Timur, berwenang mengadili perkara pidana dan perdata. PN
+              Sidoarjo berfokus pada pelayanan prima, cepat, dan transparan, didukung fasilitas PTSP, serta ramah disabilitas.
+            </p>
+          </div>
+        </div>
+
+        <button class="hero-btn prev" onclick="prevHero()">❮</button>
+        <button class="hero-btn next" onclick="nextHero()">❯</button>
+      </div>
+    </section>
+
+    <!-- DATA TABLE -->
+    <section id="data" class="koak">
+      <h1>Data Kependudukan</h1>
+      <table>
+        <tr>
+          <th>Kecamatan</th>
+          <th>Jumlah Penduduk</th>
+        </tr>
+        <tr>
+          <td>Tarik</td>
+          <td>1664.84</td>
+        </tr>
+        <tr>
+          <td>Prambon</td>
+          <td>2557.58</td>
+        </tr>
+        <tr>
+          <td>Krembung</td>
+          <td>2396.34</td>
+        </tr>
+        <tr>
+          <td>Porong</td>
+          <td>2255.65</td>
+        </tr>
+        <tr>
+          <td>Jabon</td>
+          <td>651.88</td>
+        </tr>
+        <tr>
+          <td>Tanggulangin</td>
+          <td>2870.25</td>
+        </tr>
+        <tr>
+          <td>Candi</td>
+          <td>3481.54</td>
+        </tr>
+        <tr>
+          <td>Tulangan</td>
+          <td>3128.71</td>
+        </tr>
+        <tr>
+          <td>Wonoayu</td>
+          <td>2687.19</td>
+        </tr>
+        <tr>
+          <td>Sukodono</td>
+          <td>3605.69</td>
+        </tr>
+        <tr>
+          <td>Sidoarjo</td>
+          <td>3131.5</td>
+        </tr>
+        <tr>
+          <td>Buduran</td>
+          <td>2212.6</td>
+        </tr>
+        <tr>
+          <td>Sedati</td>
+          <td>1174.57</td>
+        </tr>
+        <tr>
+          <td>Waru</td>
+          <td>6296.6</td>
+        </tr>
+        <tr>
+          <td>Gedangan</td>
+          <td>4832.74</td>
+        </tr>
+        <tr>
+          <td>Taman</td>
+          <td>6310.33</td>
+        </tr>
+        <tr>
+          <td>Krian</td>
+          <td>4894.48</td>
+        </tr>
+        <tr>
+          <td>Balongbendo</td>
+          <td>1637.05</td>
+        </tr>
+      </table>
+      <div class="chart-box">
+        <canvas id="pendudukChart"></canvas>
+      </div>
+    </section>
+
+    <!-- GALERI FASILITAS -->
+    <section id="galeri" class="koak">
+      <h1>Fasilitas Kependudukan</h1>
+      <div class="slider">
+        <button class="prev" onclick="prevCard()">❮</button>
+        <div class="slider-window">
+          <div class="slider-track" id="sliderTrack">
+            <div class="card">
+              <img src="rsudsidoarjo.jpeg" />
+              <h3>RSUD Sidoarjo</h3>
+              <p>RSUD Sidoarjo adalah rumah sakit umum daerah yang menyediakan layanan medis lengkap, mulai dari rawat jalan hingga rawat inap, dengan fasilitas modern untuk penanganan pasien di wilayah Sidoarjo.</p>
+            </div>
+            <div class="card">
+              <img src="kantorbupati.jpg" />
+              <h3>Kantor Bupati</h3>
+              <p>Kantor Bupati Sidoarjo adalah pusat pemerintahan kabupaten, tempat kebijakan dan perencanaan pembangunan wilayah dijalankan.</p>
+            </div>
+            <div class="card">
+              <img src="kecamatansukodono.jpeg" />
+              <h3>Kantor Kecamatan Sukodono</h3>
+              <p>Kantor Kecamatan Sukodono melayani administrasi lokal, termasuk kependudukan, izin usaha, dan koordinasi pembangunan di wilayah Sukodono.</p>
+            </div>
+            <div class="card">
+              <img src="kecamatanprambon.jpeg" />
+              <h3>Kantor Kecamatan Prambon</h3>
+              <p>Kantor Kecamatan Prambon adalah pusat administrasi wilayah Prambon, termasuk pelayanan kependudukan dan pengelolaan wilayah setempat.</p>
+            </div>
+            <div class="card">
+              <img src="kantorkecamatanbuduran.jpeg" />
+              <h3>Kantor Kecamatan Buduran</h3>
+              <p>Kantor Kecamatan Buduran menjadi pusat administrasi lokal untuk wilayah Buduran, melayani urusan kependudukan, perizinan, dan pelayanan masyarakat sehari-hari.</p>
+            </div>
+            <div class="card">
+              <img src="rssitikhadijah.jpeg" />
+              <h3>Rumah Sakit Siti Khadijah</h3>
+              <p>RS Siti Khodijah merupakan rumah sakit swasta yang menyediakan layanan kesehatan umum dan spesialis, termasuk poli dan fasilitas laboratorium lengkap.</p>
+            </div>
+            <div class="card">
+              <img src="kantorposcandi.jpg" />
+              <h3>Kantor Pos Candi</h3>
+              <p>Kantor Pos Candi melayani pengiriman surat, paket, dan pembayaran layanan pos, menjadi titik penting untuk komunikasi dan logistik lokal.</p>
+            </div>
+            <div class="card">
+              <img src="puskesmassedati.jpeg" />
+              <h3>Puskesmas Sedati</h3>
+              <p>Puskesmas Sedati menyediakan layanan kesehatan dasar dan promotif, termasuk imunisasi, pemeriksaan rutin, dan edukasi kesehatan masyarakat.</p>
+            </div>
+            <div class="card">
+              <img src="mpp.webp" />
+              <h3>Mal Pelayanan Publik</h3>
+              <p>Pusat Pelayanan Publik ini mempermudah warga untuk mengurus dokumen dan izin resmi pemerintah, karena menyediakan berbagai layanan dalam satu lokasi.</p>
+            </div>
+            <div class="card">
+              <img src="puskesmastulangan.jpg" />
+              <h3>Puskesmas Tulangan</h3>
+              <p>Puskesmas Tulangan menyediakan layanan kesehatan dasar bagi warga Tulangan dan sekitarnya, dengan program pencegahan penyakit dan pelayanan ibu & anak.</p>
+            </div>
+          </div>
+        </div>
+        <button class="next" onclick="nextCard()">❯</button>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" class="koak">
+      <h1>Peta Interaktif</h1>
+      <div class="map-box">
+        <iframe src="WebGIS dengan QGIS/webGIS.html"></iframe>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="koak">
+      <h1>Kontak Saya</h1>
+      <form class="contact-form">
+        <input type="text" placeholder="Nama" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Pesan" required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+      <div class="contact-info">
+        <p>Alamat : Perumahan Kahuripan Nirwana Village</p>
+        <p>Email : amandanovimaghfiroh@mail.ugm.ac.id</p>
+        <p>Telp : (031) 1234567</p>
+      </div>
+    </section>
+
+    <!-- SCROLL TOP BUTTON -->
+    <button id="scrollTopBtn">↑</button>
+
+    <!-- FOOTER -->
+    <footer>&copy; 2026 WebGIS Sidoarjo | Dibuat oleh Amanda Novi Maghfiroh</footer>
+  </body>
+</html>
